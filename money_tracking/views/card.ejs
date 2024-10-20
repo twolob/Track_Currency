@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+        <link rel="stylesheet" href="/CSS/style.css">
+        <link rel="stylesheet" href="/CSS/dashboard.css">
+        <link rel="stylesheet" href="/CSS/transaction.css">
+        <link rel="stylesheet" href="/CSS/card.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Currency Tracker</title>
+    </head>
+    <body>
+        <div class="dashboard-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <a href="/"><img src="/images/logo.png" alt="logo"></a>
+                </div>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <a href="/dashboard">
+                            <li>
+                                <img src="/images/dashboard.png" alt="Overview">
+                                <p>Overview</p>
+                            </li>
+                        </a>
+                        <a href="/dashboard/transaction">
+                            <li>
+                                <img src="/images/transactional-data.png" alt="Transaction">
+                                <p>Transaction</p>
+                            </li>
+                        </a>
+                        <a href="/dashboard/card">
+                            <li>
+                                <img src="/images/credit-card.png" alt="Credit card">
+                                <p>Card</p>
+                            </li>
+                        </a>
+                        <a href="#reports">
+                            <li>
+                                <img src="/images/report.png" alt="Report">
+                                <p>Report</p>
+                            </li>
+                        </a>
+                        <a href="#settings">
+                            <li>
+                                <img src="/images/settings.png" alt="Setting">
+                                <p>Settings</p>
+                            </li>
+                        </a>
+                        <!-- Logout section -->
+                        <a href="/logout">
+                            <li class="logout">
+                                <img src="/images/logout.png" alt="">
+                                <p>Logout</p>
+                            </li>
+                        </a>
+                    </ul>
+                </nav>
+                <div class="version">
+                    <p>Version 1.0</p>
+                    <p>Design by Wolobah Jr</p>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Header -->
+                <header class="header">
+                    <div class="header-left">
+                        <h1>Card Info</h1>
+                    </div>
+                    <div class="header-right">
+                        <a href="#notifications"><img src="/images/bell.png" alt="Notifications image"></a>
+                        <a href="#profile"><img src="/images/user.png" alt="profile image"></a>
+                    </div>
+                </header>
+                <!-- card Content -->
+                <section class="content">
+                    <div class="form-section">
+                        <form action="/dashboard/card" method="POST">
+                            <input type="text" id="card_type" name="card_type" placeholder="Card Type" required>
+                            <input type="number" step="0.01" id="card_amount" name="card_amount" placeholder="Card Amount" required>
+                            <input type="text" id="card_number" name="card_number" placeholder="Card Number" required>
+                            <label for="expiry_date">Expiry Date:</label>
+                            <input type="date" id="expiry_date" name="expiry_date" required>
+                            <button type="submit">Add Card</button>
+                        </form>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="/JS/transactionDeleteFunctionality.js"></script>
+    </body>
+</html>

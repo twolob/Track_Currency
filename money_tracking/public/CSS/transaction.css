@@ -1,0 +1,112 @@
+.content{
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+    align-items: start;
+}
+
+.form-section{
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgb(211, 216, 240);
+    /* min-width: 400px; */
+    & > form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        & > input, select, textarea{
+            padding: 10px;
+            margin-bottom: 14px;
+            border: 1px solid var(--color-metallic-silver);
+            border-radius: 4px;
+            font-size: 14px;
+            color: var(--color-dark-gray);
+            background-color: var(--color-white);
+            width: 320px;
+        }
+        & > input:focus, select:focus{
+            border-color: var(--color-dark-blue);
+            outline: none;
+        }
+        & > button{
+            background-image: linear-gradient(to right, var(--color-dark-blue), #56356d);
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            color: var(--color-white);
+            cursor: pointer;
+            font-size: 14px;
+        }
+    }
+}
+
+.transaction-display-section{
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgb(237, 242, 252);
+    overflow-y:auto;
+    height: 81.2vh;
+    width: 650px;
+    & > .single-display{
+        display: flex;
+        gap: 10px;
+        border-radius: 15px;
+        padding: 5px;
+        border: 2px solid #1b2ab4;
+        padding: 10px 20px 10px 10px;
+        margin-bottom: 8px;
+        & > .trans-type-img{
+            width: 40px;
+            height: 40px;
+            & > img{
+                width: 100%;
+            }
+        }
+        & > .trans-details{
+            /* background-color: aquamarine; */
+            & > .trans-title{
+                margin-bottom: 10px;
+                & > h2{
+                    font-size: 23px;
+                    font-family: var(--font-roboto);
+                }
+            }
+            & > .trans-amount{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 12px;
+                & > div{
+                    width: 120px;
+                    /* background-color: #56356d; */
+                    & > h3{
+                        font-weight: 300;
+                        font-size: 15px;
+                        line-height: 6px;
+                    }
+                }
+                & > .delete-button{
+                    width: 40px;
+                    margin-left: 40px;
+                    & > button{
+                        background-color: transparent;
+                        border: none;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        & > img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & > p{
+        font-size: 40px;
+        font-family: var(--font-roboto);
+        & > span{
+            color: #1b2ab4;
+        }
+    }
+}

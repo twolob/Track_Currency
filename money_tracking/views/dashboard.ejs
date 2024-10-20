@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+        <link rel="stylesheet" href="/CSS/style.css">
+        <link rel="stylesheet" href="/CSS/dashboard.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Currency Tracker</title>
+</head>
+    <body>
+        <div class="dashboard-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <a href="/"><img src="images/logo.png" alt="logo"></a>
+                </div>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <a href="/dashboard">
+                            <li>
+                                <img src="images/dashboard.png" alt="Overview">
+                                <p>Overview</p>
+                            </li>
+                        </a>
+                        <a href="/dashboard/transaction">
+                            <li>
+                                <img src="images/transactional-data.png" alt="Transaction">
+                                <p>Transaction</p>
+                            </li>
+                        </a>
+                        <a href="/dashboard/card">
+                            <li>
+                                <img src="images/credit-card.png" alt="Credit card">
+                                <p>Card</p>
+                            </li>
+                        </a>
+                        <a href="#reports">
+                            <li>
+                                <img src="images/report.png" alt="Report">
+                                <p>Report</p>
+                            </li>
+                        </a>
+                        <a href="#settings">
+                            <li>
+                                <img src="images/settings.png" alt="Setting">
+                                <p>Settings</p>
+                            </li>
+                        </a>
+                        <!-- Logout section -->
+                        <a href="/logout">
+                            <li class="logout">
+                                <img src="images/logout.png" alt="">
+                                <p>Logout</p>
+                            </li>
+                        </a>
+                    </ul>
+                </nav>
+                <div class="version">
+                    <p>Version 1.0</p>
+                    <p>Design by Wolobah Jr</p>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Header -->
+                <header class="header">
+                    <div class="header-left">
+                        <h1>Hello, <%= users.username %> 👋</h1>
+                    </div>
+                    <div class="header-right">
+                        <a href="#notifications"><img src="images/bell.png" alt="Notifications image"></a>
+                        <a href="#profile"><img src="images/user.png" alt="profile image"></a>
+                    </div>
+                </header>
+
+                <!-- Dashboard Content -->
+                <section class="content">
+                    <div class="middle-section">
+                        <div class="financial-record">
+                            <div class="finance-title">
+                                <h2>Financial Record</h2>
+                            </div>
+                            <div class="financial-items">
+                                <div id="balance">
+                                    <img src="images/balance.png" alt="Balance icon">
+                                    <h3>Balance</h3>
+                                    <p>$<%= dashboardData.balance.toFixed(2) %></p>
+                                </div>
+                                <div id="income">
+                                    <img src="images/incomes.png" alt="Income icon">
+                                    <h3>Income</h3>
+                                    <p>$<%= dashboardData.total_income.toFixed(2) %></p>
+                                </div>
+                                <div id="expenses">
+                                    <img src="images/expenses.png" alt="Expenses icon">
+                                    <h3>Expenses</h3>
+                                    <p>$<%= dashboardData.total_expense.toFixed(2) %></p>
+                                </div>
+                                <div id="savings">
+                                    <img src="images/savings.png" alt="Savings icon">
+                                    <h3>Savings</h3>
+                                    <p>$<%= (dashboardData.saving || 0).toFixed(2) %></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cash-flow">
+                            <div class="flow-title">
+                                <h2>Cash Flow</h2>
+                            </div>
+                            <div class="flow-chart">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-section">
+                        <div class="my-card">
+                            <h2>My Card</h2>
+                            <div class="card">
+                                <% if (card) { %>
+                                    <!-- If card data exists, display it -->
+                                    <h3><%= card.card_type %></h3>
+                                    <p class="card-amount">$ <%= card.card_amount %></p>
+                                    <p class="card-number">
+                                        <!-- Mask all but the last 4 digits of the card number -->
+                                        <%= card.card_number%>
+                                    </p>
+                                    <p class="date"><%= card.expiry_date %></p>
+                                <% } else { %>
+                                    <!-- If no card exists, display placeholder values -->
+                                    <h3>Card Type</h3>
+                                    <p class="card-amount">$ 0.00</p>
+                                    <p class="card-number">XXXX XXXX XXXX XXXX 0123</p>
+                                    <p class="date">05/24</p>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>                    
+                </section>
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="JS/mychart.js"></script>
+        <script id="chartData" type="application/json">
+            <%- JSON.stringify(dashboardData.chartData) %>
+        </script>
+    </body>
+</html>

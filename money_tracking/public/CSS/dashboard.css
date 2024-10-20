@@ -1,0 +1,203 @@
+body{
+    overflow: hidden;
+    background-color: rgb(245, 242, 242);
+}
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    & > .sidebar {
+        width: 250px;
+        background-color: #1e4e7f;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & > .sidebar-header {
+            padding: 20px;
+            text-align: center;
+            background-color: #0a3e71;
+            & > a img{
+                width: 170px;
+            }
+        }
+        & > .sidebar-nav ul {
+            list-style: none;
+            padding: 0;
+            & > a{
+                text-decoration: none;
+                & > li{
+                    display: flex;
+                    align-items: center;
+                    padding: 15px 20px;
+                    & > img{
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 10px;
+                    }
+                    & > p {
+                        color: rgb(200, 202, 210);
+                    }
+                }
+            }
+            & > a li:hover {
+                background-color: #0a3e71;
+            }
+            & > a .logout{
+                margin-top: 60px;
+                border-top: 1px solid rgb(200, 202, 210);
+            }
+        }
+        & > .version{
+            background-color: #0a3e71;
+            padding: 10px;
+            & > p{
+                color: rgb(171, 168, 171);
+                text-align: center;
+                font-size: 15px;
+                line-height: 20px;
+            }
+        }
+    }
+    & > .main-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        & > .header {
+            background-color: var(--color-white);
+            color: var(--color-dark-gray);
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            & > .header-left{
+                padding: 20px;
+                & > h1 {
+                    margin: 0;
+                    font-family: var(--font-roboto);
+                }
+            }
+            & > .header-right{
+                display: flex;
+                & > a{
+                    width: 50px;
+                    height: 50px;
+                    padding: 10px;
+                    background-color: rgb(239, 239, 239);
+                    border-radius: 50%;
+                    margin: 10px;
+                    transition: background-color 0.2s ease-in-out;
+                    & > img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                & > a:hover{
+                    background-color: rgb(201, 201, 201);
+                }
+            }
+        }
+        & > .content {
+            display: flex;
+            & > .middle-section{
+                padding: 20px;
+                flex: 1;
+                overflow-y:auto;
+                height: 81.2vh;
+                /* border: 1px solid black; */
+                & > .financial-record {
+                    margin-bottom: 15px;
+                    & > .finance-title{
+                        & > h2{
+                            font-size: 25px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    & > .financial-items{
+                        /* background-color: bisque; */
+                        display: flex;
+                        /* justify-content: center; */
+                        gap: 15px;
+                        & > div{
+                            background-color: rgb(203, 201, 220);
+                            padding: 10px;
+                            border-radius: 10px;
+                            flex-basis: 160px;
+                            & > h3{
+                                font-size: 15px;
+                                font-weight: 200px;
+                                font-family: "Montserrat", sans-serif;
+                            }
+                            & > p{
+                                font-size: 20px;
+                                font-weight: bold;
+                                margin-top: 5px;
+                                font-family: "Montserrat", sans-serif;
+                            }
+                            & > img{
+                                width: 50px;
+                                height: 50px;
+                            }
+                        }
+                    }
+    
+                }
+                & > .cash-flow{
+                    /* background-color: #0a3e71; */
+                    & > .flow-title{
+                        & > h2{
+                            font-size: 25px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    & > .flow-chart{
+                        background-color: white;
+                        border-radius: 15px;
+                        width: 680px;
+                        height: 350px;
+                        padding: 10px;
+                    }
+                }
+            }
+            & > .right-section{
+                width: 355px;
+                height: 100%;
+                background-color: #dceaf8;
+                & > .my-card{
+                    padding: 10px;
+                    & > h2{
+                        font-size: 25px;
+                        margin-bottom: 10px;
+                    }
+                    & > .card{
+                        background-image: linear-gradient(to right, #0a3e71, rgb(110, 110, 233));
+                        width: 330px;
+                        height: 190px;
+                        border-radius: 15px;
+                        padding: 10px;
+                        & > h3, p{
+                            color: white;
+                            font-family: "Montserrat", sans-serif;
+                        }
+                        & > h3{
+                            font-size: 25px;
+                            margin-bottom: 30px;
+                        }
+                        & > p{
+                            font-size: 20px;
+                        }
+                        & > .card-amount{
+                            margin-bottom: 10px;
+                            font-size: 25px;
+                            font-weight: bold;
+                        }
+                        & > .card-number{
+                            margin-bottom: 20px;
+                        }
+                        & > .date{
+                            text-align: end;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

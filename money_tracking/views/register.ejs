@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/register.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Track Currency</title>
+</head>
+<body>
+    <main>
+        <section id="features-outline">
+            <div class="features-container">
+                <div class="first-intro">
+                    <a href="/"><img src="/images/logo.png" alt="logo"></a>
+                    <h1>With <span>Track Currency</span>, you get:</h1>
+                </div>
+                <div class="feature-intro">
+                    <h2>Account Management</h2>
+                    <p>🗸 Keep track of your account details, update your information, 
+                        and manage your preferences all in one place.</p>
+                </div>
+                <div class="feature-intro">
+                    <h2>Transaction Tracking</h2>
+                    <p>🗸 Monitor your currency transactions in real-time, ensuring you 
+                        stay informed about your financial activities.</p>
+                </div>
+                <div class="feature-intro">
+                    <h2>Budget Planning</h2>
+                    <p>🗸 Plan and manage your budget effectively with our intuitive tools, 
+                        helping you stay on top of your financial goals.</p>
+                </div>
+                <div class="feature-review">
+                    <p>We are ❤️ by 0+ users globally at:</p>
+                </div>
+            </div>
+        </section>
+        <section id="registration-form">
+            <h2>Get started for free</h2>
+            <form action="/register" method="post">
+                <input type="text" id="fullname" name="fullname" placeholder="Full Name*" required>
+                <input type="text" id="username" name="username" placeholder="Username*" required>
+                <input type="email" id="email" name="email" placeholder="Email*" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                <label for="country">Country of Residence*:</label>
+                <select id="country" name="country" required>
+                    <option value="">Select Country</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="de">Germany</option>
+                    <option value="fr">France</option>
+                    <option value="au">Australia</option>
+                    <option value="in">India</option>
+                    <option value="ng">Nigeria</option>
+                    <option value="za">South Africa</option>
+                    <option value="cn">China</option>
+                    <option value="jp">Japan</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <label for="currency">Preferred Currency*:</label>
+                <select id="currency" name="currency" required>
+                    <option value="">Select Currency</option>
+                    <option value="usd">USD - United States Dollar</option>
+                    <option value="eur">EUR - Euro</option>
+                    <option value="gbp">GBP - British Pound</option>
+                    <option value="jpy">JPY - Japanese Yen</option>
+                    <option value="aud">AUD - Australian Dollar</option>
+                    <option value="cad">CAD - Canadian Dollar</option>
+                    <option value="ngn">NGN - Nigerian Naira</option>
+                    <option value="zar">ZAR - South African Rand</option>
+                    <option value="inr">INR - Indian Rupee</option>
+                    <option value="cny">CNY - Chinese Yuan</option>
+                    <!-- Add more options as needed -->
+
+                </select>
+                <input type="password" id="password" name="password" placeholder="Password*" required>   
+                <button type="submit">Sign Up</button>
+                <p class="register-error" id="reg-err-message"><%= errorMessage %></p>
+            </form>
+            <div class="term">
+                <p>
+                    By clicking Sign Up or registering through a third 
+                    party you accept the TrackCurrency <a href="#">Terms of Service</a> and 
+                    acknowledge the <a href="#">Privacy Policy</a> and <a href="#">Cookie Policy</a>.
+                </p>
+                <p class="signed">Already have an account? <a href="/login">Sign In</a></p>
+            </div>
+        </section>
+    </main>
+    <script src="JS/script.js"></script>
+</body>
+</html>

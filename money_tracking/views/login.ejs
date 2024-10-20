@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/login.css">
+    <title>Track Currency</title>
+</head>
+<body>
+    <main>
+        <section id="login-form">
+            <div class="login-icon">
+                <a href="/"><img src="/images/logo.png" alt="logo"></a>
+                <img src="/images/login.png" alt="login icon">
+            </div>
+            <form action="/login" method="post">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p class="login-error" id="log-err-message"><%= errorMessage %></p>
+            </form>
+            <div class="term">
+                <p class="forgot-password"><a href="#">Forgot Password</a></p>
+                <p>
+                    By clicking Sign Up or registering through a third 
+                    party you accept the TrackCurrency <a href="#">Terms of Service</a> and 
+                    acknowledge the <a href="#">Privacy Policy</a> and <a href="#">Cookie Policy</a>.
+                </p>
+                <p class="signed">No account? <a href="/register">Sign Up</a></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

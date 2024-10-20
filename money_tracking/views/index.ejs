@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Track Currency</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.png" alt="logo">
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li class="home"><a href="/">HOME</a></li>
+                <li class="feature"><a href="#features-section">FEATURE</a></li>
+                <li class="about"><a href="#about-section">ABOUT US</a></li>
+            </ul>
+        </nav>
+        <div class="login-button">
+            <a href="/login"><button>Login</button></a>
+        </div>
+        <button class="menu-icon" onclick="toggleMenu()">&#9776;</button>
+    </header>
+    <main>
+        <section id="hero-section">
+            <div class="welcome">
+                <h1>👋, Welcome to <span>Track Currency</span></h1>
+                <p>Track your expenses, manage your budgets, and achive your finanical goals with ease.</p>
+                <a href="/register"><button>JOIN NOW</button></a>
+            </div>
+            <div class="hero-image">
+                <img draggable="false" src="/images/main-section-image.png" alt="">
+            </div>
+        </section>
+        <section id="about-section">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>We are a dedicated team of developers and financial experts committed to providing 
+                    the best tools for personal finance management. <span>Our mission</span> is to help you take control 
+                    of your financial life through innovative technology and user-friendly design.
+                </p>
+                <a href="/register"><button class="sing-up-button">SIGN-UP</button></a>
+                <a href="#"><button class="watch-button">
+                    <img src="/images/play.png" alt="">
+                    Watch Video
+                </button></a>
+            </div>
+            <div class="register-user">
+                <div class="customers">
+                    <div class="fees">
+                        <h3>0%</h3>
+                        <p>All transaction is free of charge!</p>
+                    </div>
+                    <div class="users-num">
+                        <h3>20K+</h3>
+                        <p>People have already joined us!</p>
+                    </div>
+                </div>
+                <!-- <div class="reviews-section">
+
+                </div> -->
+            </div>
+        </section>
+        <section id="features-section">
+            <div class="features-text">
+                <h2>Our Features</h2>
+                <p>Explore the key features that make our app the perfect tool for personal finance management</p>
+            </div>
+            <div class="features-list">
+                <div class="center-list">
+                    <div class="list">
+                        <div class="list-images">
+                            <img src="/images/online-registration.png" alt="">
+                        </div>
+                        <div class="discription">
+                            <h3>User Registration and Login</h3>
+                            <p>Lorem ipsum dolort laboriosam! Numquam voluptatum quidem Itaque, alias.</p>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="list-images">
+                            <img src="images\accountant.png" alt="">
+                        </div>
+                        <div class="discription">
+                            <h3>Account Management</h3>
+                            <p>Lorem ipsum dolort laboriosam! Numquam voluptatum quidem Itaque, alias.</p>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="list-images">
+                            <img src="/images/transactional-data.png" alt="">
+                        </div>
+                        <div class="discription">
+                            <h3>Transaction Tracking</h3>
+                            <p>Lorem ipsum dolort laboriosam! Numquam voluptatum quidem Itaque, alias.</p>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="list-images">
+                            <img src="/images/planning.png" alt="">
+                        </div>
+                        <div class="discription">
+                            <h3>Budget Planning</h3>
+                            <p>Lorem ipsum dolort laboriosam! Numquam voluptatum quidem Itaque, alias.</p>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="list-images">
+                            <img src="/images/bell.png" alt="">
+                        </div>
+                        <div class="discription">
+                            <h3>Notifications</h3>
+                            <p>Lorem ipsum dolort laboriosam! Numquam voluptatum quidem Itaque, alias.</p>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="list-images">
+                            <img src="/images/people.png" alt="">
+                        </div>
+                        <div class="discription">
+                            <h3>Secure and User-Friendly</h3>
+                            <p>Lorem ipsum dolort laboriosam! Numquam voluptatum quidem Itaque, alias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="newsletter-section">
+            <div class="newsletter-text">
+                <h2>Newsletter</h2>
+            </div>
+            <div class="">
+                <form id="newsletter-form" action="/" method="post">
+                    <input type="text" name="newsletterEmail" id="newsletter_email" placeholder="mail@gmail.com">
+                    <input type="submit" id="submit" value="SUBSCRIBE">
+                    <p class="error-message"><%= err_message %></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="social-links">
+            <div class="footer-logo">
+                <img src="../images/logo.png" alt="logo">
+            </div>
+            <div class="social-images">
+                <a href="#"><img src="/images/youtube.png" alt="youtube logo"></a>
+                <a href="https://www.facebook.com/thomas.wolobah.33"><img src="/images/facebook.png" alt="facebook logo"></a>
+                <a href="https://www.linkedin.com/in/thomas-f-wolobah-jr-609362185/"><img src="/images/linkedin.png" alt="linkedin logo"></a>
+            </div>
+        </div>
+        <div id="footer-features">
+            <div class="">
+                <h4>FEATURES</h4>
+                <li class=""><a href="#">Registration</a></li>
+                <li class=""><a href="#">Budget Planning</a></li>
+                <li class=""><a href="#">Notifications</a></li>
+                <li class=""><a href="#">Security</a></li>
+            </div>
+            <div class="">
+                <h4>RESOURCES</h4>
+                <li class=""><a href="#">resources</a></li>
+                <li class=""><a href="#">resources</a></li>
+                <li class=""><a href="#">resources</a></li>
+            </div>
+            <div class="">
+                <h4>CONTACTS</h4>
+                <li class=""><a href="#">(+91)814 - 869- 6905</a></li>
+                <li class=""><a href="#">twolobah04@gmail.com</a></li>
+            </div>
+        </div>
+        <div id="copyright-message">
+            <p>&copy; 2024 Money Tracker. All rights reserved. | Designed with care to help you take control of your finances.</p>
+        </div>
+    </footer>
+    <script src="JS/script.js"></script>
+</body>
+</html>
